@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isa Functional Beauty | Maquillaje Inteligente & Cuidado Facial</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            rose: '#F9ECE8',
+                            nude: '#E8D3C7',
+                            clay: '#C8937C',
+                            terracotta: '#A65B45',
+                            dark: '#2B2320',
+                            cream: '#FCFAF7',
+                            accent: '#D4A373'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-hero {
+            background: linear-gradient(135deg, #FCFAF7 0%, #F9ECE8 50%, #E8D3C7 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-dark font-sans antialiased selection:bg-brand-clay selection:text-white">
+
+    <!-- Navegación -->
+    <nav class="fixed top-0 left-0 w-full z-50 glass-card transition-all duration-300 shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-2">
+                <span class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-brand-terracotta">ISA</span>
+                <span class="text-xs uppercase tracking-widest font-semibold border-l border-brand-clay/40 pl-2 text-brand-dark/70">Functional<br>Beauty</span>
+            </a>
+
+            <!-- Links Desktop -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-dark/80">
+                <a href="#inicio" class="hover:text-brand-terracotta transition-colors">Inicio</a>
+                <a href="#concepto" class="hover:text-brand-terracotta transition-colors">¿Qué es?</a>
+                <a href="#productos" class="hover:text-brand-terracotta transition-colors">Catálogo & Precios</a>
+                <a href="#beneficios" class="hover:text-brand-terracotta transition-colors">Beneficios</a>
+                <a href="#testimonios" class="hover:text-brand-terracotta transition-colors">Opiniones</a>
+            </div>
+
+            <!-- Botón de contacto directo -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <a href="https://wa.me/573234359458?text=Hola%20Isa%20Beauty,%20quisiera%20recibir%20asesor%C3%ADa%20sobre%20sus%20productos." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="bg-brand-terracotta hover:bg-brand-dark text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all shadow-md hover:shadow-lg flex items-center space-x-2">
+                    <i class="fab me-1 fa-whatsapp text-lg"></i>
+                    <span>Contactar (+57 323 435 9458)</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-brand-dark focus:outline-none p-2" aria-label="Abrir menú">
+                <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-cream border-b border-brand-nude/40 px-6 py-4 space-y-4">
+            <a href="#inicio" class="block text-brand-dark hover:text-brand-terracotta py-1 font-medium">Inicio</a>
+            <a href="#concepto" class="block text-brand-dark hover:text-brand-terracotta py-1 font-medium">¿Qué es?</a>
+            <a href="#productos" class="block text-brand-dark hover:text-brand-terracotta py-1 font-medium">Catálogo & Precios</a>
+            <a href="#beneficios" class="block text-brand-dark hover:text-brand-terracotta py-1 font-medium">Beneficios</a>
+            <a href="#testimonios" class="block text-brand-dark hover:text-brand-terracotta py-1 font-medium">Opiniones</a>
+            <a href="https://wa.me/573234359458?text=Hola%20Isa%20Beauty,%20quisiera%20asesor%C3%ADa%20personalizada." 
+               target="_blank" 
+               class="w-full bg-brand-terracotta text-white py-3 rounded-xl font-medium text-center flex items-center justify-center space-x-2">
+                <i class="fab fa-whatsapp text-lg"></i>
+                <span>Pedir por WhatsApp</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="pt-28 pb-16 md:pt-36 md:pb-24 gradient-hero overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-brand-rose/80 border border-brand-clay/30 px-4 py-1.5 rounded-full text-xs sm:text-sm text-brand-terracotta font-medium">
+                        <i class="fas fa-sparkles text-xs"></i>
+                        <span>Maquillaje que cuida y nutre tu piel</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-brand-dark leading-tight">
+                        Realza tu belleza natural con maquillaje <span class="italic font-normal text-brand-terracotta">multifuncional</span>.
+                    </h1>
+
+                    <p class="text-lg text-brand-dark/75 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Fórmulas híbridas enriquecidas con ácido hialurónico, antioxidantes y SPF. Ahorra tiempo, simplifica tu rutina y luce radiante en minutos con <b>Isa Functional Beauty</b>.
+                    </p>
+
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#productos" class="w-full sm:w-auto bg-brand-terracotta hover:bg-brand-dark text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg text-center flex items-center justify-center space-x-2">
+                            <span>Ver Productos & Precios</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="https://wa.me/573234359458?text=Hola%20Isa!%20Me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20para%20elegir%20mis%20tonos." 
+                           target="_blank" 
+                           class="w-full sm:w-auto bg-white hover:bg-brand-rose text-brand-dark border border-brand-clay/30 px-8 py-4 rounded-full font-medium transition-all text-center flex items-center justify-center space-x-2">
+                            <i class="fab fa-whatsapp text-emerald-600 text-lg"></i>
+                            <span>Asesoría Personalizada</span>
+                        </a>
+                    </div>
+
+                    <!-- Métricas rápidas -->
+                    <div class="pt-8 border-t border-brand-clay/20 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <span class="block text-2xl font-serif font-bold text-brand-terracotta">100%</span>
+                            <span class="text-xs text-brand-dark/70">Cruelty Free & Vegano</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-serif font-bold text-brand-terracotta">3 en 1</span>
+                            <span class="text-xs text-brand-dark/70">Multiuso Inteligente</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-serif font-bold text-brand-terracotta">SPF 30+</span>
+                            <span class="text-xs text-brand-dark/70">Protección Diaria</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen Hero -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -top-4 -left-4 w-72 h-72 bg-brand-clay/20 rounded-full filter blur-3xl"></div>
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/60">
+                            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1000&auto=format&fit=crop" 
+                                 alt="Maquillaje Funcional Isa Beauty" 
+                                 class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700"
+                                 onerror="this.src='https://placehold.co/600x800/E8D3C7/2B2320?text=Isa+Beauty+Functional'">
+                        </div>
+                        <!-- Tag flotante -->
+                        <div class="absolute bottom-6 left-6 right-6 glass-card p-4 rounded-2xl shadow-lg border border-white/80 flex items-center space-x-4">
+                            <div class="bg-brand-rose p-3 rounded-xl text-brand-terracotta">
+                                <i class="fas fa-heart text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-brand-dark/60 uppercase font-semibold">Favorito del mes</p>
+                                <p class="text-sm font-bold text-brand-dark">Tinted Glow Serum 3-in-1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONCEPTO / CONOCENOS -->
+    <section id="concepto" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-4">
+                <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-terracotta">El Concepto Isa</h2>
+                <h3 class="text-3xl sm:text-4xl font-serif font-bold text-brand-dark">¿Qué es el Maquillaje Funcional?</h3>
+                <p class="text-brand-dark/70 text-base sm:text-lg leading-relaxed">
+                    Es la combinación perfecta entre <b>SkinCare (Cuidado de la piel)</b> y <b>Color</b>. Diseñado para personas activas que buscan lucir un rostro fresco, hidratado y radiante en menos de 5 minutos, sin capas pesadas ni obstruir los poros.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                <div class="p-8 rounded-2xl bg-brand-cream border border-brand-nude/40 hover:shadow-md transition-all text-center">
+                    <div class="w-14 h-14 bg-brand-rose rounded-full flex items-center justify-center text-brand-terracotta text-2xl mx-auto mb-6">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h4 class="font-serif text-xl font-bold mb-3">Multiuso y Práctico</h4>
+                    <p class="text-sm text-brand-dark/70 leading-relaxed">
+                        Un solo producto para párpados, mejillas y labios. Simplifica tu cosmetiquera y ahorra dinero.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-brand-cream border border-brand-nude/40 hover:shadow-md transition-all text-center">
+                    <div class="w-14 h-14 bg-brand-rose rounded-full flex items-center justify-center text-brand-terracotta text-2xl mx-auto mb-6">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4 class="font-serif text-xl font-bold mb-3">Ingredientes Activos</h4>
+                    <p class="text-sm text-brand-dark/70 leading-relaxed">
+                        Enriquecidos con Ácido Hialurónico, Niacinamida, Vitamina E y Extracto de Manzanilla.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-brand-cream border border-brand-nude/40 hover:shadow-md transition-all text-center">
+                    <div class="w-14 h-14 bg-brand-rose rounded-full flex items-center justify-center text-brand-terracotta text-2xl mx-auto mb-6">
+                        <i class="fas fa-feather-alt"></i>
+                    </div>
+                    <h4 class="font-serif text-xl font-bold mb-3">Acabado Ligero & Natural</h4>
+                    <p class="text-sm text-brand-dark/70 leading-relaxed">
+                        Sensación de "piel al desnudo" con tono uniforme, luminosidad saludable y protección UV.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATALOGO DE PRODUCTOS Y PRECIOS -->
+    <section id="productos" class="py-20 bg-brand-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-terracotta">Catálogo Exclusivo</h2>
+                    <h3 class="text-3xl sm:text-4xl font-serif font-bold text-brand-dark mt-2">Nuestros Productos Funcionales</h3>
+                </div>
+                <!-- Filtros -->
+                <div class="mt-6 md:mt-0 flex flex-wrap gap-2" id="filter-buttons">
+                    <button onclick="filterProducts('all')" class="filter-btn active bg-brand-terracotta text-white px-4 py-2 rounded-full text-xs font-semibold transition-all">Todos</button>
+                    <button onclick="filterProducts('rostro')" class="filter-btn bg-white hover:bg-brand-rose text-brand-dark px-4 py-2 rounded-full text-xs font-semibold border border-brand-nude/60 transition-all">Rostro</button>
+                    <button onclick="filterProducts('labios')" class="filter-btn bg-white hover:bg-brand-rose text-brand-dark px-4 py-2 rounded-full text-xs font-semibold border border-brand-nude/60 transition-all">Labios & Mejillas</button>
+                    <button onclick="filterProducts('ojos')" class="filter-btn bg-white hover:bg-brand-rose text-brand-dark px-4 py-2 rounded-full text-xs font-semibold border border-brand-nude/60 transition-all">Cejas & Ojos</button>
+                </div>
+            </div>
+
+            <!-- Grilla de productos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
+
+                <!-- Producto 1 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border border-brand-nude/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="rostro">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1625102181297-2ff92f02cb8a?q=80&w=800&auto=format&fit=crop" 
+                             alt="Isa Tinted Serum Skin Hydrator" 
+                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/400x300/E8D3C7/2B2320?text=Serum+Con+Color'">
+                        <span class="absolute top-4 left-4 bg-brand-terracotta text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Bestseller</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-brand-terracotta font-semibold">Rostro & SkinCare</span>
+                            <h4 class="font-serif text-xl font-bold text-brand-dark mt-1">Serum Con Color HydroGlow SPF 30</h4>
+                            <p class="text-xs text-brand-dark/70 mt-2 line-clamp-2">
+                                Base ligera multifuncional enriquecida con ácido hialurónico y niacinamida. Corrige imperfecciones mientras hidrata.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-brand-rose flex items-center justify-between">
+                            <div>
+                                <span class="block text-xs text-brand-dark/50">Precio</span>
+                                <span class="text-xl font-bold text-brand-dark">$68.000 <span class="text-xs text-brand-dark/60 font-normal">COP</span></span>
+                            </div>
+                            <a href="https://wa.me/573234359458?text=Hola%20Isa!%20Quiero%20comprar%20el%20Serum%20Con%20Color%20HydroGlow." 
+                               target="_blank" 
+                               class="bg-brand-rose hover:bg-brand-terracotta text-brand-terracotta hover:text-white p-3 rounded-full transition-colors"
+                               title="Comprar por WhatsApp">
+                                <i class="fab fa-whatsapp text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border border-brand-nude/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="labios">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=800&auto=format&fit=crop" 
+                             alt="Isa Velvet Stick Multiuso" 
+                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/400x300/E8D3C7/2B2320?text=Stick+Multiuso'">
+                        <span class="absolute top-4 left-4 bg-brand-clay text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">3 en 1</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-brand-terracotta font-semibold">Labios, Mejillas & Ojos</span>
+                            <h4 class="font-serif text-xl font-bold text-brand-dark mt-1">Sticks Multifuncional Velvet Balm</h4>
+                            <p class="text-xs text-brand-dark/70 mt-2 line-clamp-2">
+                                Barra cremosa para dar color a tus labios, rubor en tus pómulos y sombra suave. Con manteca de karité.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-brand-rose flex items-center justify-between">
+                            <div>
+                                <span class="block text-xs text-brand-dark/50">Precio</span>
+                                <span class="text-xl font-bold text-brand-dark">$45.000 <span class="text-xs text-brand-dark/60 font-normal">COP</span></span>
+                            </div>
+                            <a href="https://wa.me/573234359458?text=Hola%20Isa!%20Quiero%20pedir%20el%20Stick%20Multifuncional%20Velvet%20Balm." 
+                               target="_blank" 
+                               class="bg-brand-rose hover:bg-brand-terracotta text-brand-terracotta hover:text-white p-3 rounded-full transition-colors"
+                               title="Comprar por WhatsApp">
+                                <i class="fab fa-whatsapp text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border border-brand-nude/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="ojos">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1591019378414-0e316d84a737?q=80&w=800&auto=format&fit=crop" 
+                             alt="Isa Brow Lash Fortifying Gel" 
+                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/400x300/E8D3C7/2B2320?text=Gel+Fortificante'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-brand-terracotta font-semibold">Ojos & Cejas</span>
+                            <h4 class="font-serif text-xl font-bold text-brand-dark mt-1">Gel Fijador & Crecimiento Cejas/Pestañas</h4>
+                            <p class="text-xs text-brand-dark/70 mt-2 line-clamp-2">
+                                Fijación orgánicamente natural que peina tus cejas mientras estimula el crecimiento con biotina y aceite de ricino.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-brand-rose flex items-center justify-between">
+                            <div>
+                                <span class="block text-xs text-brand-dark/50">Precio</span>
+                                <span class="text-xl font-bold text-brand-dark">$38.000 <span class="text-xs text-brand-dark/60 font-normal">COP</span></span>
+                            </div>
+                            <a href="https://wa.me/573234359458?text=Hola%20Isa!%20Me%20interesa%20el%20Gel%20Fijador%20y%20Crecimiento." 
+                               target="_blank" 
+                               class="bg-brand-rose hover:bg-brand-terracotta text-brand-terracotta hover:text-white p-3 rounded-full transition-colors"
+                               title="Comprar por WhatsApp">
+                                <i class="fab fa-whatsapp text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border border-brand-nude/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="rostro">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=800&auto=format&fit=crop" 
+                             alt="Isa Iluminador Líquido Natural" 
+                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/400x300/E8D3C7/2B2320?text=Iluminador+Liquido'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-brand-terracotta font-semibold">Rostro & Cuerpo</span>
+                            <h4 class="font-serif text-xl font-bold text-brand-dark mt-1">Glow Drops Drops Iluminadoras</h4>
+                            <p class="text-xs text-brand-dark/70 mt-2 line-clamp-2">
+                                Gotas concentradas de luz con vitamina E. Mezlalas con tu hidratante o úsalas directo para un acabado deslumbrante.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-brand-rose flex items-center justify-between">
+                            <div>
+                                <span class="block text-xs text-brand-dark/50">Precio</span>
+                                <span class="text-xl font-bold text-brand-dark">$52.000 <span class="text-xs text-brand-dark/60 font-normal">COP</span></span>
+                            </div>
+                            <a href="https://wa.me/573234359458?text=Hola%20Isa!%20Quiero%20comprar%20las%20Glow%20Drops." 
+                               target="_blank" 
+                               class="bg-brand-rose hover:bg-brand-terracotta text-brand-terracotta hover:text-white p-3 rounded-full transition-colors"
+                               title="Comprar por WhatsApp">
+                                <i class="fab fa-whatsapp text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border border-brand-nude/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="labios">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?q=80&w=800&auto=format&fit=crop" 
+                             alt="Isa Lip Oil Reparador" 
+                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/400x300/E8D3C7/2B2320?text=Lip+Oil+Reparador'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-brand-terracotta font-semibold">Labios</span>
+                            <h4 class="font-serif text-xl font-bold text-brand-dark mt-1">Lip Treatment Oil Nutritivo</h4>
+                            <p class="text-xs text-brand-dark/70 mt-2 line-clamp-2">
+                                Aceite labial con efecto volumizador suave, escualano y péptidos. Tono rosado sutil no pegajoso.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-brand-rose flex items-center justify-between">
+                            <div>
+                                <span class="block text-xs text-brand-dark/50">Precio</span>
+                                <span class="text-xl font-bold text-brand-dark">$35.000 <span class="text-xs text-brand-dark/60 font-normal">COP</span></span>
+                            </div>
+                            <a href="https://wa.me/573234359458?text=Hola%20Isa!%20Deseo%20el%20Lip%20Treatment%20Oil." 
+                               target="_blank" 
+                               class="bg-brand-rose hover:bg-brand-terracotta text-brand-terracotta hover:text-white p-3 rounded-full transition-colors"
+                               title="Comprar por WhatsApp">
+                                <i class="fab fa-whatsapp text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 6 Kit Combo -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border-2 border-brand-terracotta/40 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col relative" data-category="rostro">
+                    <span class="bg-brand-terracotta text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-br-lg absolute top-0 left-0 z-10">Kit Recomendado</span>
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop" 
+                             alt="Kit Isa Full Functional Beauty" 
+                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/400x300/E8D3C7/2B2320?text=Kit+Esencial+Isa'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-brand-terracotta font-semibold">Rutina Completa</span>
+                            <h4 class="font-serif text-xl font-bold text-brand-dark mt-1">Kit Isa Essential Glow (3 Piezas)</h4>
+                            <p class="text-xs text-brand-dark/70 mt-2 line-clamp-2">
+                                Incluye: Serum Con Color + Stick Multiuso + Lip Oil Reparador. Todo lo que necesitas para tu día a día.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-brand-rose flex items-center justify-between">
+                            <div>
+                                <span class="block text-xs text-emerald-700 font-semibold">¡Ahorras $18.000!</span>
+                                <span class="text-xl font-bold text-brand-dark">$130.000 <span class="text-xs text-brand-dark/60 font-normal">COP</span></span>
+                            </div>
+                            <a href="https://wa.me/573234359458?text=Hola%20Isa!%20Me%20interesa%20el%20Kit%20Isa%20Essential%20Glow." 
+                               target="_blank" 
+                               class="bg-brand-terracotta hover:bg-brand-dark text-white px-4 py-2.5 rounded-full text-xs font-semibold transition-colors flex items-center space-x-1">
+                                <i class="fab fa-whatsapp text-sm"></i>
+                                <span>Pedir Kit</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-terracotta">Experiencias Reales</h2>
+                <h3 class="text-3xl sm:text-4xl font-serif font-bold text-brand-dark mt-2">Lo que dicen nuestras clientas</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="p-8 rounded-2xl bg-brand-cream border border-brand-nude/40 relative">
+                    <div class="flex text-amber-400 mb-4 text-xs">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-sm text-brand-dark/80 italic mb-6">
+                        "Amo el Serum Con Color. En las mañanas no tengo tiempo de maquillarme mucho y este producto me unifica el tono, me hidrata y me protege del sol en un solo paso. ¡Es maravilloso!"
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-brand-nude rounded-full flex items-center justify-center font-bold text-brand-dark text-sm">
+                            AM
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">Andrea Morales</p>
+                            <p class="text-xs text-brand-dark/60">Cali, Colombia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="p-8 rounded-2xl bg-brand-cream border border-brand-nude/40 relative">
+                    <div class="flex text-amber-400 mb-4 text-xs">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-sm text-brand-dark/80 italic mb-6">
+                        "El Stick Multiuso no falta en mi bolso. Lo uso para retoque rápido en mejillas y labios durante el día. La textura es ultra suave y huele delicioso. Atención al cliente impecable."
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-brand-nude rounded-full flex items-center justify-center font-bold text-brand-dark text-sm">
+                            CP
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">Camila Pérez</p>
+                            <p class="text-xs text-brand-dark/60">Bogotá, Colombia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="p-8 rounded-2xl bg-brand-cream border border-brand-nude/40 relative">
+                    <div class="flex text-amber-400 mb-4 text-xs">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-sm text-brand-dark/80 italic mb-6">
+                        "Buscaba maquillaje que no me sacara acné ni sintiera pesado. Isa Functional sobrepasó mis expectativas. Mi piel luce radiante y muy natural. ¡100% recomendado!"
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-brand-nude rounded-full flex items-center justify-center font-bold text-brand-dark text-sm">
+                            VR
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">Valentina Ríos</p>
+                            <p class="text-xs text-brand-dark/60">Medellín, Colombia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER CONTACTO & WHATSAPP DIRECTO -->
+    <section class="py-16 bg-brand-rose border-y border-brand-nude/50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-dark">¿Tienes dudas sobre cuál es tu tono ideal?</h2>
+            <p class="text-brand-dark/80 text-base sm:text-lg max-w-2xl mx-auto">
+                Te asesoramos de manera personalizada vía WhatsApp para seleccionar las fórmulas e ingredientes que mejor se adaptan a tu tipo de piel.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/573234359458?text=Hola%20Isa!%20Me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20personalizada%20para%20elegir%20mis%20productos." 
+                   target="_blank" 
+                   class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-full font-semibold transition-all shadow-lg flex items-center space-x-3 text-lg">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span>Escribir al 323 435 9458</span>
+                </a>
+                <a href="tel:3234359458" 
+                   class="bg-white hover:bg-brand-cream text-brand-dark border border-brand-clay/30 px-8 py-4 rounded-full font-semibold transition-all flex items-center space-x-2">
+                    <i class="fas fa-phone text-brand-terracotta"></i>
+                    <span>Llamar directamente</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-brand-cream py-12 border-t border-brand-dark/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Columna 1: Brand -->
+                <div class="space-y-4 md:col-span-1">
+                    <span class="font-serif text-3xl font-bold tracking-tight text-brand-nude">ISA</span>
+                    <p class="text-xs text-brand-cream/70 leading-relaxed">
+                        Maquillaje funcional inteligente. Nutre, protege y realza tu belleza sin complicaciones.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Links -->
+                <div>
+                    <h5 class="text-sm font-bold text-brand-nude uppercase tracking-wider mb-4">Navegación</h5>
+                    <ul class="space-y-2 text-xs text-brand-cream/70">
+                        <li><a href="#inicio" class="hover:text-brand-nude">Inicio</a></li>
+                        <li><a href="#concepto" class="hover:text-brand-nude">¿Qué es Maquillaje Funcional?</a></li>
+                        <li><a href="#productos" class="hover:text-brand-nude">Catálogo & Precios</a></li>
+                        <li><a href="#testimonios" class="hover:text-brand-nude">Opiniones</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Contacto -->
+                <div>
+                    <h5 class="text-sm font-bold text-brand-nude uppercase tracking-wider mb-4">Contacto Directo</h5>
+                    <ul class="space-y-2 text-xs text-brand-cream/70">
+                        <li class="flex items-center space-x-2">
+                            <i class="fab fa-whatsapp text-emerald-400"></i>
+                            <span>+57 323 435 9458</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-phone text-brand-nude"></i>
+                            <span>323 435 9458</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-envelope text-brand-nude"></i>
+                            <span>contacto@isabeauty.com</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-map-marker-alt text-brand-nude"></i>
+                            <span>Envíos a toda Colombia</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Redes -->
+                <div>
+                    <h5 class="text-sm font-bold text-brand-nude uppercase tracking-wider mb-4">Síguenos</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-terracotta transition-colors text-white" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-terracotta transition-colors text-white" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-terracotta transition-colors text-white" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/10 text-center text-xs text-brand-cream/50">
+                <p>&copy; 2026 Isa Functional Beauty. Todos los derechos reservados. Colombia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="https://wa.me/573234359458?text=Hola%20Isa!%20Quiero%20más%20información%20sobre%20tus%20productos." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center group"
+       aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp text-3xl"></i>
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap text-sm font-medium pl-0 group-hover:pl-2">
+            ¡Chatea con Isa!
+        </span>
+    </a>
+
+    <!-- JAVASCRIPT PARA INTERACTIVIDAD -->
+    <script>
+        // Menú Móvil Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            }
+        });
+
+        // Filtrado de Productos en Catálogo
+        function filterProducts(category) {
+            const cards = document.querySelectorAll('.product-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Actualizar botones activos
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-terracotta', 'text-white');
+                btn.classList.add('bg-white', 'text-brand-dark');
+            });
+            event.target.classList.remove('bg-white', 'text-brand-dark');
+            event.target.classList.add('bg-brand-terracotta', 'text-white');
+
+            // Filtrar cards
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
